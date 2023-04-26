@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+}
+
+/*
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) 
+ */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
+  margin: auto;
+  max-width: 600px;
+}
+
+.container div {
+  padding: 2rem;
+  color: white;
+}
+
+.container div:nth-of-type(2) {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.container div:nth-of-type(3) {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.top {
+  grid-column: 1/-1;
+  background: white;
+}
+
+.top h2 {
+  color: hsl(179, 62%, 43%);
+}
+
+.lemon {
+  color: hsl(71, 73%, 54%);
+}
+
+.top p {
+  color: hsl(218, 22%, 67%);
+}
+
+.month p:nth-of-type(1) {
+  color: hsl(218, 22%, 67%);
+}
+
+.month p span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.signup {
+  padding: 1em;
+  border-radius: 5px;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  width: 100%;
+  border: none;
+}
+
+@media (max-width: 400px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
